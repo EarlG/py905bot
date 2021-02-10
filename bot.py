@@ -14,12 +14,11 @@ def send_echo( message ):
         detstat =  w.get_detailed_status()
         #temp = 1
         #detstat = "1"
-        answer = "В городе " + place + " температура "
+        answer = "In " + place + ": "
         answer += str(temp)
         answer += "C, " + detstat
     except Exception:
-        answer = 'Не удалось определить место, '
-        answer += 'напишите название города по английски или русски'
+        answer = 'Location is not defined. Write the name of the city.'
 
     bot.send_message(message.chat.id, answer)
 
